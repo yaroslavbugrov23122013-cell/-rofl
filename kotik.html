@@ -1,0 +1,68 @@
+
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Мой котик 🐱</title>
+<style>
+body {
+  background: #ffe5f0;
+  font-family: Arial, sans-serif;
+  text-align: center;
+  padding-top: 70px;
+  color: #a34c78;
+}
+.cat {
+  font-size: 120px;
+  animation: bounce 1s infinite alternate;
+}
+@keyframes bounce {
+  from { transform: translateY(0); }
+  to { transform: translateY(-15px); }
+}
+h1 { color: #e47ca8; }
+button {
+  background: #ff9fc5;
+  border: none;
+  padding: 15px 25px;
+  border-radius: 25px;
+  font-size: 18px;
+  color: white;
+  margin: 10px;
+}
+#message {
+  font-size: 20px;
+  margin-top: 20px;
+}
+</style>
+</head>
+<body>
+
+<h1>Мой маленький котик ♡</h1>
+
+<div class="cat">🐈</div>
+
+<p>Мяу! Я твой маленький друг!</p>
+
+<button onclick="meow()">Погладить котика 💗</button>
+
+<div id="message"></div>
+
+<script>
+function meow() {
+  const messages = [
+    "Мурррр! 💕",
+    "Я тебя люблю! 🐾",
+    "Мяу-мяу! 😽",
+    "Погладь меня ещё!",
+    "Ты самый лучший! 💖"
+  ];
+
+  document.getElementById("message").innerText =
+    messages[Math.floor(Math.random() * messages.length)];
+}
+</script>
+
+</body>
+</html>
